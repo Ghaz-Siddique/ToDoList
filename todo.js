@@ -16,12 +16,17 @@ function addTodo() {
     for (var i = 0; i < array.length; i++) {
         data += "<li>" + array[i] + "</li>";
         todoList.innerHTML = data;
+
     }
+   
     data = "";
     document.getElementById("input").value = ""
 
 }
-
+function del() {
+    var list = document.getElementById("todo_list");
+    list.removeChild(list.childNodes[0]);
+}
 function removed() {
    document.getElementById("todo_list").innerHTML = "";
     array = []
